@@ -24,7 +24,7 @@ class Show extends Component {
         console.log(id);
         axios.delete('/ideas/' + id)
             .then((result) => {
-                this.props.history.push("/")
+                this.props.history.push("/indexidea")
             });
     }
 
@@ -34,23 +34,23 @@ class Show extends Component {
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            Idea Details
+                            Detalle de Idea
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Ideas List</Link></h4>
+                        <h4><Link to="/index"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Lista de Ideas</Link></h4>
                         <dl>
-                            <dt>Title:</dt>
+                            <dt>Título:</dt>
                             <dd>{this.state.idea.title}</dd>
-                            <dt>Description:</dt>
+                            <dt>Descripción:</dt>
                             <dd>{this.state.idea.description}</dd>
-                            <dt>Category:</dt>
+                            <dt>Categoría:</dt>
                             <dd>{this.state.idea.category}</dd>
-                            <dt>Date:</dt>
+                            <dt>Fecha de publicación:</dt>
                             <dd>{moment(this.state.idea.date).format("MMM Do YY")}</dd>
                         </dl>
-                        <Link to={`/edit/${this.state.idea.id}`} class="btn btn-success">Edit</Link>&nbsp;
-                        <button onClick={this.delete.bind(this, this.state.idea.id)} class="btn btn-danger">Delete</button>
+                        <Link to={`/editidea/${this.state.idea.id}`} class="btn btn-success">Editar</Link>&nbsp;
+                        <button onClick={this.delete.bind(this, this.state.idea.id)} class="btn btn-danger">Eliminar</button>
                     </div>
                 </div>
             </div>

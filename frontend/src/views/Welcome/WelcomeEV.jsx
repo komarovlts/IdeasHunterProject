@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Welcome extends Component {
+class WelcomeEV extends Component {
     constructor() {
         super();
         this.state = {
@@ -11,26 +11,29 @@ class Welcome extends Component {
     render() {
         return (
             <div className="container py-4">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
+                <div className="row justify-content-around">
+                    <div className="col-4">
                         <center>
                             <div className="card">
                                 <form className="card-body">
-                                    <a class="btn btn-primary" href="/index" role="button">Usuario Normal</a>
+                                    <a class="btn btn-primary" href="/indexidea" role="button">Ideas</a>
                                 </form>
                             </div>
+                        </center>
+                    </div>
+                    <div className="col-4">
+                        <center>
                             <div className="card">
                                 <form className="card-body">
-                                    <a class="btn btn-primary" href="/create" role="button">Evaluador</a>
+                                    <a class="btn btn-primary" href="/indexchallenge" role="button">Desafíos</a>
                                 </form>
                             </div>
                         </center>
                     </div>
                 </div>
             </div>
-
         )
     }
 }
 
-export default Welcome;
+export default WelcomeEV;

@@ -12,7 +12,8 @@ class Create extends Component {
             title: '',
             description: '',
             category: '',
-            date: ''
+            startDate: '',
+            finishDate: '',
         };
     }
     onChange = (e) => {
@@ -23,28 +24,28 @@ class Create extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        const date = localdate.getTime();
+        const startDate = localdate.getTime();
 
-        const { title, description, category } = this.state;
+        const { title, description, category, finishDate } = this.state;
 
-        axios.post('/ideas', { title, description, category, date })
+        axios.post('/challenges', { title, description, category, startDate, finishDate })
             .then((result) => {
-                this.props.history.push("/indexideas")
+                this.props.history.push("/indexchallenge")
             });
     }
 
     render() {
-        const { title, description, category, date } = this.state;
+        const { title, description, category, startDate, finishDate } = this.state;
         return (
             <div class="container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            AÑADIR IDEA
+                            AÑADIR DESAFÍO
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <h4><Link to="/indexidea"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Lista de Ideas</Link></h4>
+                        <h4><Link to="/indexchallenge"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Lista de Desafíos</Link></h4>
                         <form onSubmit={this.onSubmit}>
                             <div class="form-group">
                                 <label for="title">Título:</label>
@@ -59,7 +60,10 @@ class Create extends Component {
                                 <input type="text" class="form-control" name="category" value={category} onChange={this.onChange} placeholder="Categoría" />
                             </div>
                             <div class="form-group">
-                                <input type="hidden" class="form-control" name="date" value={date} onChange={this.onChange} placeholder="Fecha de publicación" />
+                                <input type="hidden" class="form-control" name="startDate" value={startDate} onChange={this.onChange} placeholder="Fecha de publicación" />
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" name="finishDate" value={finishDate} onChange={this.onChange} placeholder="Fecha de publicación" />
                             </div>
                             <button type="submit" class="btn btn-default">Enviar</button>
                         </form>

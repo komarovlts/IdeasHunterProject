@@ -32,7 +32,7 @@ class Edit extends Component {
 
         axios.put('/ideas/' + this.props.match.params.id, { title, description, category, date })
             .then((result) => {
-                this.props.history.push("/show/" + this.props.match.params.id)
+                this.props.history.push("/showidea/" + this.props.match.params.id)
             });
     }
 
@@ -42,29 +42,25 @@ class Edit extends Component {
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            EDIT IDEA
+                            Editar Idea
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <h4><Link to={`/show/${this.state.idea.id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Idea List</Link></h4>
+                        <h4><Link to={`/showidea/${this.state.idea.id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Lista de Ideas</Link></h4>
                         <form onSubmit={this.onSubmit}>
                             <div class="form-group">
-                                <label for="title">Title:</label>
+                                <label for="title">Título:</label>
                                 <input type="text" class="form-control" name="title" value={this.state.idea.title} onChange={this.onChange} placeholder="Title" />
                             </div>
                             <div class="form-group">
-                                <label for="description">Description:</label>
+                                <label for="description">Descripción:</label>
                                 <input type="text" class="form-control" name="description" value={this.state.idea.description} onChange={this.onChange} placeholder="Description" />
                             </div>
                             <div class="form-group">
-                                <label for="category">Category:</label>
+                                <label for="category">Categoría:</label>
                                 <input type="text" class="form-control" name="category" value={this.state.idea.category} onChange={this.onChange} placeholder="Category" />
                             </div>
-                            <div class="form-group">
-                                <label for="date">Date:</label>
-                                <input type="date" class="form-control" name="date" value={this.state.idea.date} onChange={this.onChange} placeholder="Date" />
-                            </div>
-                            <button type="submit" class="btn btn-default">Update</button>
+                            <button type="submit" class="btn btn-default">Actualizar</button>
                         </form>
                     </div>
                 </div>
