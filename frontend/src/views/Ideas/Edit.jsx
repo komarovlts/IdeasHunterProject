@@ -40,34 +40,34 @@ class Edit extends Component {
     render() {
         return (
             <div className="App">
-            <Navbar />
-            <div class="container">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Editar Idea
+                <Navbar />
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Editar Idea
                         </h3>
-                    </div>
-                    <div class="panel-body">
-                        <h4><Link to={`/showidea/${this.state.idea.id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Lista de Ideas</Link></h4>
-                        <form onSubmit={this.onSubmit}>
-                            <div class="form-group">
-                                <label for="title">Título:</label>
-                                <input type="text" class="form-control" name="title" value={this.state.idea.title} onChange={this.onChange} placeholder="Title" />
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Descripción:</label>
-                                <input type="text" class="form-control" name="description" value={this.state.idea.description} onChange={this.onChange} placeholder="Description" />
-                            </div>
-                            <div class="form-group">
-                                <label for="category">Categoría:</label>
-                                <input type="text" class="form-control" name="category" value={this.state.idea.category} onChange={this.onChange} placeholder="Category" />
-                            </div>
-                            <button type="submit" class="btn btn-default">Actualizar</button>
-                        </form>
+                        </div>
+                        <div class="panel-body">
+                            <h4><Link to={`/showidea/${this.state.idea.id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Lista de Ideas</Link></h4>
+                            <form onSubmit={this.onSubmit}>
+                                <div class="form-group">
+                                    <label for="title">Título:</label>
+                                    <input type="text" class="form-control" name="title" value={this.state.idea.title} onChange={this.onChange} placeholder="Title" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Descripción:</label>
+                                    <input type="text" class="form-control" name="description" value={this.state.idea.description} onChange={this.onChange} placeholder="Description" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="category">Categoría:</label>
+                                    <input type="text" class="form-control" name="category" value={this.state.idea.category} onChange={this.onChange} placeholder="Category" />
+                                </div>
+                                <button type="submit" class="btn btn-default">Actualizar</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         );
     }

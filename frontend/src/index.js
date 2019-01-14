@@ -19,6 +19,7 @@ import IndexIdea from './views/Ideas/Index';
 import ShowIdea from './views/Ideas/Show';
 import EditIdea from './views/Ideas/Edit';
 import CreateIdea from './views/Ideas/Create';
+import IdeaDetails from './views/Ideas/Details';
 
 /* Challenges */
 import IndexChallenge from './views/Challenges/Index';
@@ -45,7 +46,7 @@ ReactDOM.render(
             <Route path='/editidea/:id' component={EditIdea} />
             <Route path='/createidea' component={CreateIdea} />
             <Route path='/showidea/:id' component={ShowIdea} />
-
+            <Route path='/ideadetails/:id' component={IdeaDetails} />
 
             <Route path='/indexchallenge' component={IndexChallenge} />
             <Route path='/showchallenge/:id' component={ShowChallenge} />

@@ -52,7 +52,7 @@ class Index extends Component {
                         <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
                             <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
                         </button>
-                        <a className="navbar-brand" style={style_user_name} href="#"> Nombre Usuario</a>
+                        <a className="navbar-brand" style={style_user_name} href="/"> Nombre Usuario</a>
                     </form>
                 </nav>
                 <div class="container">
@@ -103,6 +103,7 @@ const style_logo = {
 
 const style_central_navbar = {
     backgroundColor: '#9f4054',
+    marginBottom: '20px',
 };
 
 const style_button_search = {

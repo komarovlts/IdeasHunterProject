@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from "../../components/Navbar/Navbar";
+
 var moment = require('moment');
 
 function searchingFor(term) {
@@ -53,7 +53,7 @@ class Index extends Component {
                         <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
                             <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
                         </button>
-                        <a className="navbar-brand" style={style_user_name} href="#"> Nombre Usuario</a>
+                        <a className="navbar-brand" style={style_user_name} href="/"> Nombre Usuario</a>
                     </form>
                 </nav>
                 <div class="container">
@@ -74,7 +74,6 @@ class Index extends Component {
                                         <th>Categoría</th>
                                         <th>Valoración</th>
                                         <th>Fecha de publicación</th>
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +85,7 @@ class Index extends Component {
                                                 <td>{i.category}</td>
                                                 <td>{i.valuation}</td>
                                                 <td>{moment(i.date).format("MMM Do YY")}</td>
+                                                <td><Link to={`/showdetails/${i.id}`}>{'Ver más'}</Link></td>
                                             </tr>
                                         )
                                     }
@@ -107,6 +107,7 @@ const style_logo = {
 
 const style_central_navbar = {
     backgroundColor: '#9f4054',
+    marginBottom: '20px',
 };
 
 const style_button_search = {
