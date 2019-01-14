@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../../components/Buttons/buttons.css";
 
 class Login extends Component {
     constructor() {
@@ -15,7 +16,7 @@ class Login extends Component {
                     <div class="col-md-8">
                         <div className="card">
                             <form className="card-body">
-                                <a class="btn btn-primary" href="/create" role="button">Usuario Normal</a>
+                                <a class="btn btn-primary " href="/create" role="button">Usuario Normal</a>
 
                                 <a class="btn btn-primary" href="/create" role="button">Evaluador</a>
                             </form>
