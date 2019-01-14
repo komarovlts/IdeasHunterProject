@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Navbar from 'components/Navbar/Navbar';
+import Navbar from "../../components/Navbar/Navbar";
 
 class PreLogin extends Component {
     constructor() {
