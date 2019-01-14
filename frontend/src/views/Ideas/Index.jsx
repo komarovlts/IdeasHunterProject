@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from "../../components/Navbar/Navbar";
 var moment = require('moment');
+
 
 class Index extends Component {
 
@@ -22,6 +24,8 @@ class Index extends Component {
 
     render() {
         return (
+            <div className="App">
+            <Navbar />
             <div class="container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -53,6 +57,7 @@ class Index extends Component {
                         </table>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

@@ -1,0 +1,26 @@
+.logo-navbar {
+    max-width: '80px';
+    height: '80px';
+  };
+
+.central-navbar {
+    background-color: '#9f4054';
+  };
+
+.button-search {
+    border-color: 'white';
+    color: white;
+    
+  };
+
+.buttonr-search {
+    max-width: '30px';
+    height: '24px';
+  };
+
+.name-user {
+    margin-left: '10px';
+    color: 'white';
+
+    
+  };

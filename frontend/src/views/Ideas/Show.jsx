@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Navbar from "../../components/Navbar/Navbar";
 var moment = require('moment');
+
 
 class Show extends Component {
 
@@ -30,6 +32,8 @@ class Show extends Component {
 
     render() {
         return (
+            <div className="App">
+            <Navbar />
             <div class="container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -53,6 +57,7 @@ class Show extends Component {
                         <button onClick={this.delete.bind(this, this.state.idea.id)} class="btn btn-danger">Eliminar</button>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Navbar from "../../components/Navbar/Navbar";
 
 var localdate = new Date();
 
@@ -36,6 +37,8 @@ class Create extends Component {
     render() {
         const { title, description, category, date } = this.state;
         return (
+            <div className="App">
+            <Navbar />
             <div class="container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -65,6 +68,7 @@ class Create extends Component {
                         </form>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }

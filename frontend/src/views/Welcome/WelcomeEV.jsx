@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Navbar from "../../components/Navbar/Navbar";
+
 class WelcomeEV extends Component {
     constructor() {
         super();
@@ -10,6 +12,8 @@ class WelcomeEV extends Component {
 
     render() {
         return (
+        <div className="App">
+            <Navbar />
             <div className="container py-4">
                 <div className="row justify-content-around">
                     <div className="col-4">
@@ -32,6 +36,7 @@ class WelcomeEV extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         )
     }
 }
