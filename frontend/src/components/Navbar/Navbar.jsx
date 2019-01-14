@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Navbar.css';
 
 
 class Navbar extends Component {
@@ -9,21 +8,46 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <nav className="navbar navbar-light logo-navbar">
-                <a className="navbar-brand"  href="#">
-                    <img id="brand-image central-navbar" alt="Website logo" src="logo_alaya_light.png"/>
+            <nav className="navbar navbar-light" style={style_central_navbar}>
+                <a className="navbar-brand" href="#">
+                    <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                 </a>
                 <form className="form-inline">
                     <input className="form-control mr-sm-2" type="search" placeholder="Buscador de ideas" aria-label="Buscador de ideas" />
-                    <button className="btn btn-outline-success my-2 my-sm-0 button-search" type="submit" >
-                    <img id="brand-image buttonr-search" alt="Website logo" src="alayalogo.png"/>
+                    <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
+                        <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
                     </button>
-                    <a className="navbar-brand name-user"  href="#"> Nombre Usuario</a>
+                    <a className="navbar-brand" style={style_user_name} href="#"> Nombre Usuario</a>
                 </form>
             </nav>
 
         );
     }
 }
+
+/* Styles */
+
+const style_logo = {
+    height: "35px",
+};
+
+const style_central_navbar = {
+    backgroundColor: '#9f4054',
+};
+
+const style_button_search = {
+    borderColor: 'white',
+    color: 'white',
+};
+
+
+const style_buttonr_search = {
+    height: '24px',
+};
+
+const style_user_name = {
+    marginLeft: '10px',
+    color: 'white',
+};
 
 export default Navbar;
