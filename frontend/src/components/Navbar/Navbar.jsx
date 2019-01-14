@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+        };
     }
+
     render() {
         return (
             <nav className="navbar navbar-light" style={style_central_navbar}>
@@ -13,10 +17,6 @@ class Navbar extends Component {
                     <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                 </a>
                 <form className="form-inline">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Buscador de ideas" aria-label="Buscador de ideas" />
-                    <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
-                        <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
-                    </button>
                     <a className="navbar-brand" style={style_user_name} href="#"> Nombre Usuario</a>
                 </form>
             </nav>
@@ -24,6 +24,21 @@ class Navbar extends Component {
         );
     }
 }
+
+/* Antiguo buscador de Ideas */
+
+/*
+                    <input
+                        className="form-control mr-sm-2"
+                        type="search"
+                        placeholder="Buscador de ideas"
+                        aria-label="Buscador de ideas"
+                    />
+                    <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
+                        <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
+                    </button>
+
+*/
 
 /* Styles */
 
