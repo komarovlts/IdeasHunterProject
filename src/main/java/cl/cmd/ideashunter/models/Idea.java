@@ -21,12 +21,12 @@ public class Idea {
     public Idea() {
     }
 
-    public Idea(String title, String description, String category, Date date, List<String> comments) {
+    public Idea(String title, String description, String category, Integer valuation, Date date) {
         this.title = title;
         this.description = description;
         this.category = category;
+        this.valuation = valuation;
         this.date = date;
-        this.comments = comments;
     }
 
     public String getId() {

@@ -33,31 +33,35 @@ class Show extends Component {
     render() {
         return (
             <div className="App">
-            <Navbar />
-            <div class="container">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            Detalle de Idea
+                <Navbar />
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Detalle de Idea
                         </h3>
-                    </div>
-                    <div class="panel-body">
-                        <h4><Link to="/index"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Lista de Ideas</Link></h4>
-                        <dl>
-                            <dt>Título:</dt>
-                            <dd>{this.state.idea.title}</dd>
-                            <dt>Descripción:</dt>
-                            <dd>{this.state.idea.description}</dd>
-                            <dt>Categoría:</dt>
-                            <dd>{this.state.idea.category}</dd>
-                            <dt>Fecha de publicación:</dt>
-                            <dd>{moment(this.state.idea.date).format("MMM Do YY")}</dd>
-                        </dl>
-                        <Link to={`/editidea/${this.state.idea.id}`} class="btn btn-success">Editar</Link>&nbsp;
+                        </div>
+                        <div class="panel-body">
+                            <h4><Link to="/indexidea"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Lista de Ideas</Link></h4>
+                            <dl>
+                                <dt>Título:</dt>
+                                <dd>{this.state.idea.title}</dd>
+                                <dt>Descripción:</dt>
+                                <dd>{this.state.idea.description}</dd>
+                                <dt>Categoría:</dt>
+                                <dd>{this.state.idea.category}</dd>
+                                <dt>Valoración:</dt>
+                                <dd>{this.state.idea.valuation}</dd>
+                                <dt>Comentarios:</dt>
+                                <dd>{this.state.idea.comments}</dd>
+                                <dt>Fecha de publicación:</dt>
+                                <dd>{moment(this.state.idea.date).format("MMM Do YY")}</dd>
+                            </dl>
+                            <Link to={`/editidea/${this.state.idea.id}`} class="btn btn-success">Editar</Link>&nbsp;
                         <button onClick={this.delete.bind(this, this.state.idea.id)} class="btn btn-danger">Eliminar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         );
     }

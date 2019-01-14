@@ -38,7 +38,7 @@ class Index extends Component {
         return (
             <div className="App">
                 <nav className="navbar navbar-light" style={style_central_navbar}>
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                     </a>
                     <form className="form-inline">
@@ -72,7 +72,9 @@ class Index extends Component {
                                         <th>Título</th>
                                         <th>Descripción</th>
                                         <th>Categoría</th>
+                                        <th>Valoración</th>
                                         <th>Fecha de publicación</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -82,6 +84,7 @@ class Index extends Component {
                                                 <td><Link to={`/showidea/${i.id}`}>{i.title}</Link></td>
                                                 <td>{i.description}</td>
                                                 <td>{i.category}</td>
+                                                <td>{i.valuation}</td>
                                                 <td>{moment(i.date).format("MMM Do YY")}</td>
                                             </tr>
                                         )

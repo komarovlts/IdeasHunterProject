@@ -13,7 +13,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-light" style={style_central_navbar}>
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                 </a>
                 <form className="form-inline">
