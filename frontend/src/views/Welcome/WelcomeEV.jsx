@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Navbar from "../../components/Navbar/Navbar";
+import "../../components/Buttons/buttons.css";
 
 class WelcomeEV extends Component {
     constructor() {
@@ -20,7 +21,7 @@ class WelcomeEV extends Component {
                             <center>
                                 <div className="card" style={style_card}>
                                     <form className="card-body">
-                                        <a class="btn btn-primary" style={style_button} href="/indexidea" role="button">Ideas</a>
+                                        <a class="btn btn-primary botonimagen1" style={style_button} href="/indexidea" role="button">Ideas</a>
                                     </form>
                                 </div>
                             </center>
@@ -29,7 +30,7 @@ class WelcomeEV extends Component {
                             <center>
                                 <div className="card" style={style_card}>
                                     <form className="card-body">
-                                        <a class="btn btn-primary" style={style_button} href="/indexchallenge" role="button">Desafíos</a>
+                                        <a class="btn btn-primary botonimagen2" style={style_button} href="/indexchallenge" role="button">Desafíos</a>
                                     </form>
                                 </div>
                             </center>
@@ -41,17 +42,21 @@ class WelcomeEV extends Component {
     }
 }
 
-/* Styles */
-
 const style_card = {
+    marginLeft: '30px',
+    marginRight: '0px',
     border: '0px',
     borderRadius: '0px',
 };
 
 const style_button = {
     backgroundColor: '#9f4054',
+    height: "300px",
+    width: "300px",
     border: 'none',
     marginTop: '100px',
+    borderRadius: '33350px',
+
 };
 
 export default WelcomeEV;

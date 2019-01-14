@@ -1,0 +1,29 @@
+.botonimagen1{
+    background-image: url("/usuario_normal1.png");
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 5px 5px rgb(0, 0, 0);
+  }
+
+.botonimagen1:hover{
+  font-size: 80px;
+  text-shadow: 5px 5px rgb(182, 6, 6);
+}
+
+.botonimagen2{
+  background-image: url("/usuario_normal.jpg")  !important;
+  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 5px 5px rgb(0, 0, 0);
+}
+
+.botonimagen2:hover{
+  font-size: 80px;
+  text-shadow: 5px 5px rgb(182, 6, 6);
+}
