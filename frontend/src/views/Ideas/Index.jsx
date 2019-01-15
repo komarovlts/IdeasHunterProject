@@ -85,7 +85,7 @@ class Index extends Component {
                                                 <td>{i.category}</td>
                                                 <td>{i.valuation}</td>
                                                 <td>{moment(i.date).format("MMM Do YY")}</td>
-                                                <td><Link to={`/showdetails/${i.id}`}>{'Ver más'}</Link></td>
+
                                             </tr>
                                         )
                                     }
@@ -98,6 +98,8 @@ class Index extends Component {
         );
     }
 }
+
+// Detaills, Likes System ->   <td><Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link></td>
 
 /* Styles */
 

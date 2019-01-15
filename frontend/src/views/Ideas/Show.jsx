@@ -67,22 +67,4 @@ class Show extends Component {
     }
 }
 
-/* Styles */
-
-const style_logo = {
-    height: "35px",
-};
-
-const style_central_navbar = {
-    backgroundColor: '#9f4054',
-    marginBottom: '20px',
-};
-
-
-const style_user_name = {
-    marginLeft: '10px',
-    color: 'white',
-};
-
-
 export default Show;
