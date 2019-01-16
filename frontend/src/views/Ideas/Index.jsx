@@ -64,28 +64,31 @@ class Index extends Component {
                         </h3>
                         </div>
                         <tbody>
+                            <div class="panel-body">
+                                <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
 
-                        
-                                {
-                                    ideas.filter(searchingFor(term)).map(i =>
-                                        <div className="card propCards">
-                                            <div className="card-header">
-                                                <Link to={`/showidea/${i.id}`}>{i.title}</Link>
-                                                <div className="card-body">
-                                                    <p>Descripción: {i.description}</p>
-                                                    <p>Categoría: {i.category}</p>
-                                                    <p>Valoración: {i.valuation}</p>
-                                                    <p>Fecha de publicación: {moment(i.date).format("MMM Do YY")}</p>
-                                                    <Link to={`/showdetails/${i.id}`}>{'Ver más'}</Link>
-                                                </div>
+                            </div>
+
+                            {
+                                ideas.filter(searchingFor(term)).map(i =>
+                                    <div className="card propCards">
+                                        <div className="card-header">
+                                            <Link to={`/showidea/${i.id}`}>{i.title}</Link>
+                                            <div className="card-body">
+                                                <p>Descripción: {i.description}</p>
+                                                <p>Categoría: {i.category}</p>
+                                                <p>Valoración: {i.valuation}</p>
+                                                <p>Fecha de publicación: {moment(i.date).format("MMM Do YY")}</p>
+                                                <Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link>
                                             </div>
-                                        </div>                                     
-                                    )
-                                }
+                                        </div>
+                                    </div>
+                                )
+                            }
                         </tbody>
                         <div class="panel-body">
                             <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
-                            
+
                         </div>
                     </div>
                 </div>

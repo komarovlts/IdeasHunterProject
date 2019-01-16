@@ -24,52 +24,36 @@ class Create extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        const { userName, userType } = this.state;
+        const { userName } = this.state;
 
-        axios.post('/users', { userName, userType})
+        axios.post('/users', { userName })
             .then((result) => {
-                this.props.history.push("/")
+                this.props.history.push("/postlogin")
             });
     }
 
     render() {
-        const { userName, userType} = this.state;
+        const { userName } = this.state;
         return (
             <div className="App">
                 <Navbar />
                 <div class="container">
                     <form >
-                    <div class="form-group row marginone" >
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Nombre: </label>
+                        <div class="form-group row marginone" >
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Nombre: </label>
 
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control marginetwo" name="userName" value={userName} onChange={this.onChange} placeholder="Nombre Usuario" /> 
-                                    </div>
-                                <label for="name" class="col-md-4 col-form-label text-md-right">Tipo: </label>
-                                <div class="col-md-6">
-
-                            <div class="form-group">
-                                <form>
-                                    <select value={userType} className="custom-select" onChange={this.onChange}>
-                                        <option selected disabled>Seleccionar Tipo</option>
-                                        <option value="1" >Usuario</option>
-                                        <option value="2">Evaluador</option>
-                                        <option value="3">Administrador</option>
-                                    </select>
-                                </form>
-                                
+                            <div class="col-md-6">
+                                <input type="text" class="form-control marginetwo" name="userName" value={userName} onChange={this.onChange} placeholder="Nombre Usuario" />
                             </div>
-
-                            
-
-                             </div>
-                    </div>
-
-                    <button type="submit" class="buttonBasic">Enviar</button>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Tipo: </label>
+                            <div class="col-md-6">
+                            </div>
+                        </div>
+                        <button type="submit" class="buttonBasic">Enviar</button>
                     </form>
                 </div>
             </div>
-                    
+
         );
     }
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "../../components/Navbar/Navbar";
 import "../../components/Buttons/buttons.css";
 
-class PreLogin extends Component {
+class PostLogin extends Component {
     constructor() {
         super();
         this.state = {
@@ -61,4 +61,4 @@ const style_button = {
 
 };
 
-export default PreLogin;
+export default PostLogin;

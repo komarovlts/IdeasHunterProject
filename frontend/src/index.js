@@ -8,7 +8,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import './index.css';
 import './App.css';
 
-import PreLogin from './views/Auth/PreLogin';
+import PostLogin from './views/Auth/PostLogin';
 import Register from './views/Auth/Register';
 
 /* Welcome */
@@ -37,8 +37,8 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <Router>
         <div>
-            <Route exact path='/' component={PreLogin} />
-            <Route exact path='/register' component={Register} />
+            <Route exact path='/' component={Register} />
+            <Route exact path='/postlogin' component={PostLogin} />
 
             <Route path='/welcomenu' component={WelcomeNU} />
             <Route path='/welcomeev' component={WelcomeEV} />

@@ -10,10 +10,7 @@ class Details extends Component {
         super(props);
         this.state = {
             idea: {},
-            count: '',
         };
-        this.incrementCount = this.incrementCount.bind(this);
-        this.incrementCount = this.incrementCount.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -43,14 +40,6 @@ class Details extends Component {
                 this.props.history.push("/indexidea/")
             });
     }
-
-    incrementCount() {
-        this.setState({
-            count: this.state.idea.valuation,
-            count: this.state.count + 1
-        });
-    }
-
 
     render() {
         return (
