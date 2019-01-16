@@ -14,20 +14,20 @@ class PreLogin extends Component {
         return (
             <div className="App">
                 <Navbar />
-                <div className="container  py-4">
-                    <div class="row justify-content-center">
+                <div className="container py-4">
+                    <div class="row justify-content-around">
                         <div className="col-4" >
                             <center>
-                                <div className="card" style={style_card}>
+                                <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
-                                        <a class="btn btn-primary botonimagen1" style={style_button} href="/welcomenu" role="button">Usuario Normal</a>
+                                        <a class="btn btn-primary botonimagen1" style={style_button} href="/welcomenu" role="button">Usuario</a>
                                     </form>
                                 </div>
                             </center>
                         </div>
                         <div className="col-4">
                             <center>
-                                <div className="card" style={style_card}>
+                                <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
                                         <a class="btn btn-primary botonimagen2" style={style_button} href="/welcomeev" role="button">Evaluador</a>
                                     </form>

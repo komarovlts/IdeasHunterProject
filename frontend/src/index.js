@@ -9,6 +9,7 @@ import './index.css';
 import './App.css';
 
 import PreLogin from './views/Auth/PreLogin';
+import Register from './views/Auth/Register';
 
 /* Welcome */
 import WelcomeNU from './views/Welcome/WelcomeNU';
@@ -37,6 +38,7 @@ ReactDOM.render(
     <Router>
         <div>
             <Route exact path='/' component={PreLogin} />
+            <Route exact path='/register' component={Register} />
 
             <Route path='/welcomenu' component={WelcomeNU} />
             <Route path='/welcomeev' component={WelcomeEV} />

@@ -102,7 +102,7 @@ const style_logo = {
 };
 
 const style_central_navbar = {
-    backgroundColor: '#9f4054',
+    backgroundColor: 'rgb(183, 29, 2)',
     marginBottom: '20px',
 };
 

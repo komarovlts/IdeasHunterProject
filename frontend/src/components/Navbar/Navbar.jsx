@@ -41,11 +41,11 @@ class Navbar extends Component {
 /* Styles */
 
 const style_logo = {
-    height: "35px",
+    height: "50px",
 };
 
 const style_central_navbar = {
-    backgroundColor: '#9f4054',
+    backgroundColor: 'rgb(183, 29, 2)',
     marginBottom: '20px',
 };
 

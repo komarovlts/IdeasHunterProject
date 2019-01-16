@@ -63,10 +63,39 @@ class Index extends Component {
                                 LISTA DE IDEAS
                         </h3>
                         </div>
+                        <tbody>
 
+                        
+                                {
+                                    ideas.filter(searchingFor(term)).map(i =>
+                                        <div className="card propCards">
+                                            <div className="card-header">
+                                                <Link to={`/showidea/${i.id}`}>{i.title}</Link>
+                                                <div className="card-body">
+                                                    <p>Descripción: {i.description}</p>
+                                                    <p>Categoría: {i.category}</p>
+                                                    <p>Valoración: {i.valuation}</p>
+                                                    <p>Fecha de publicación: {moment(i.date).format("MMM Do YY")}</p>
+                                                    <Link to={`/showdetails/${i.id}`}>{'Ver más'}</Link>
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                                    )
+                                }
+                        </tbody>
                         <div class="panel-body">
                             <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
-                            <table class="table table-stripe">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+/*
+<table class="table table-stripe">
                                 <thead>
                                     <tr>
                                         <th>Título</th>
@@ -91,22 +120,16 @@ class Index extends Component {
                                     }
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+*/
 
 /* Styles */
 
 const style_logo = {
-    height: "35px",
+    height: "50px",
 };
 
 const style_central_navbar = {
-    backgroundColor: '#9f4054',
+    backgroundColor: 'rgb(183, 29, 2)',
     marginBottom: '20px',
 };
 

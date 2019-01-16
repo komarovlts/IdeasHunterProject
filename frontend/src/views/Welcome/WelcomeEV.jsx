@@ -19,7 +19,7 @@ class WelcomeEV extends Component {
                     <div className="row justify-content-around">
                         <div className="col-4">
                             <center>
-                                <div className="card" style={style_card}>
+                                <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
                                         <a class="btn btn-primary botonimagen1" style={style_button} href="/indexidea" role="button">Ideas</a>
                                     </form>
@@ -28,7 +28,7 @@ class WelcomeEV extends Component {
                         </div>
                         <div className="col-4">
                             <center>
-                                <div className="card" style={style_card}>
+                                <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
                                         <a class="btn btn-primary botonimagen2" style={style_button} href="/indexchallenge" role="button">Desafíos</a>
                                     </form>

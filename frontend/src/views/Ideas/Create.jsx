@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from "../../components/Navbar/Navbar";
+import "../../components/Forms/forms.css";
+import "../../components/Links/links.css";
 
 var localdate = new Date();
 
