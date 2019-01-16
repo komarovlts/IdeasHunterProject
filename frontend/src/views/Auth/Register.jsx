@@ -45,9 +45,6 @@ class Create extends Component {
                             <div class="col-md-6">
                                 <input type="text" class="form-control marginetwo" name="userName" value={userName} onChange={this.onChange} placeholder="Nombre Usuario" />
                             </div>
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Tipo: </label>
-                            <div class="col-md-6">
-                            </div>
                         </div>
                         <button type="submit" class="buttonBasic">Enviar</button>
                     </form>
