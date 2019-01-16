@@ -41,8 +41,8 @@ public class Idea {
         return title;
     }
 
-    public void setTitle(String tittle) {
-        this.title = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
