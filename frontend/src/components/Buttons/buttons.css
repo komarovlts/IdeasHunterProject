@@ -38,6 +38,27 @@
   transform:scale(1.25);
 }
 
+.botonimagen3{
+  background-image: url("/administrador.jpg")  !important;
+  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 5px 5px rgb(0, 0, 0);
+}
+
+.botonimagen3:hover{
+  font-size: 70px;
+  text-shadow: 5px 5px rgb(3, 3, 3);
+  -webkit-transform:scale(1.25);
+  -moz-transform:scale(1.25);
+  -ms-transform:scale(1.25);
+  -o-transform:scale(1.25);
+  transform:scale(1.25);
+}
+
+
 .cardTransp{
   background-color: #fff0 !important;
 }
