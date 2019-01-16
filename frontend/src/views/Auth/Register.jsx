@@ -25,6 +25,8 @@ class Create extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const { userName } = this.state;
+        //con esto se gana
+        localStorage.setItem("userName", userName);
 
         axios.post('/users', { userName })
             .then((result) => {
@@ -38,7 +40,7 @@ class Create extends Component {
             <div className="App">
                 <Navbar />
                 <div class="container">
-                    <form >
+                    <form onSubmit={this.onSubmit}>
                         <div class="form-group row marginone" >
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nombre: </label>
 

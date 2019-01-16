@@ -15,7 +15,7 @@ class Navbar extends Component {
                     <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                 </a>
                 <form className="form-inline">
-                    <a className="navbar-brand" style={style_user_name} href="/"> Nombre Usuario</a>
+                    <a className="navbar-brand" style={style_user_name} href="/">{localStorage.getItem("userName") == undefined ? " " : localStorage.getItem("userName")}</a>
                 </form>
             </nav>
 
