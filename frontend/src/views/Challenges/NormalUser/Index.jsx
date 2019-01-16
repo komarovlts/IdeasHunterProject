@@ -52,7 +52,7 @@ class Index extends Component {
                         <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
                             <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
                         </button>
-                        <a className="navbar-brand" style={style_user_name} href="/"> Nombre Usuario</a>
+                        <a className="navbar-brand" style={style_user_name} href="/">{localStorage.getItem("userName") == undefined ? " " : localStorage.getItem("userName")}</a>
                     </form>
                 </nav>
                 <div class="container">
@@ -98,7 +98,7 @@ class Index extends Component {
 /* Styles */
 
 const style_logo = {
-    height: "35px",
+    height: "50px",
 };
 
 const style_central_navbar = {

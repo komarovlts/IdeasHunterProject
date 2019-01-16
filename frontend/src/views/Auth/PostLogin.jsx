@@ -35,6 +35,16 @@ class PostLogin extends Component {
                             </center>
                         </div>
 
+                        <div className="col-4">
+                            <center>
+                                <div className="card cardTransp" style={style_card}>
+                                    <form className="card-body">
+                                        <a class="btn btn-primary botonimagen3" style={style_button} href="/welcomeadm" role="button">Admin</a>
+                                    </form>
+                                </div>
+                            </center>
+                        </div>
+
                     </div>
                 </div >
             </div >

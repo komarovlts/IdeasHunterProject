@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Navbar from "../../components/Navbar/Navbar";
 import "../../components/Buttons/buttons.css";
 
-class WelcomeEV extends Component {
+class WelcomeADM extends Component {
     constructor() {
         super();
         this.state = {
@@ -30,7 +30,7 @@ class WelcomeEV extends Component {
                             <center>
                                 <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
-                                        <a class="btn btn-primary botonimagen2" style={style_button} href="/IndexChallengeNU" role="button">Desafíos</a>
+                                        <a class="btn btn-primary botonimagen2" style={style_button} href="/IndexChallenge" role="button">Desafíos</a>
                                     </form>
                                 </div>
                             </center>
@@ -59,4 +59,4 @@ const style_button = {
 
 };
 
-export default WelcomeEV;
+export default WelcomeADM;

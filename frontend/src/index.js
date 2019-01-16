@@ -14,6 +14,7 @@ import Register from './views/Auth/Register';
 /* Welcome */
 import WelcomeNU from './views/Welcome/WelcomeNU';
 import WelcomeEV from './views/Welcome/WelcomeEV';
+import WelcomeADM from './views/Welcome/WelcomeADM';
 
 /* Ideas */
 import IndexIdea from './views/Ideas/Index';
@@ -31,6 +32,8 @@ import CreateChallenge from './views/Challenges/Create';
 import IndexChallengeNU from './views/Challenges/NormalUser/Index';
 import ShowChallengeNU from './views/Challenges/NormalUser/Show';
 
+
+
 /* Others */
 import * as serviceWorker from './serviceWorker';
 
@@ -42,7 +45,7 @@ ReactDOM.render(
 
             <Route path='/welcomenu' component={WelcomeNU} />
             <Route path='/welcomeev' component={WelcomeEV} />
-
+            <Route path='/welcomeadm' component={WelcomeADM} />
 
             <Route path='/indexidea' component={IndexIdea} />
             <Route path='/editidea/:id' component={EditIdea} />
