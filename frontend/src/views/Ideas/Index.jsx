@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import "../../components/Panels/panels.css";
 
 var moment = require('moment');
 
@@ -63,29 +64,36 @@ class Index extends Component {
                                 LISTA DE IDEAS
                         </h3>
                         </div>
-                        <tbody>
-                            <div class="panel-body">
-                                <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
 
-                            </div>
+                        <div class="panel-body">
+                                <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
+                        </div>
+                        
+                        <table className="table_props">
+                            <thead>
+                                <tr>
+                                    <th>Título</th><th>Descripción</th>
+                                    <th>Categoría</th>
+                                    <th>Valoración</th>
+                                    <th>Fecha Publicación</th>
+                                    <th>Ver más</th>
+                                </tr>
+                            </thead>
 
                             {
                                 ideas.filter(searchingFor(term)).map(i =>
-                                    <div className="card propCards">
-                                        <div className="card-header">
-                                            <Link to={`/showidea/${i.id}`}>{i.title}</Link>
-                                            <div className="card-body">
-                                                <p>Descripción: {i.description}</p>
-                                                <p>Categoría: {i.category}</p>
-                                                <p>Valoración: {i.valuation}</p>
-                                                <p>Fecha de publicación: {moment(i.date).format("MMM Do YY")}</p>
-                                                <Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <tr>
+                                    <td>{i.title}</td>
+                                    <td>{i.description}</td>
+                                    <td>{i.category}</td>
+                                    <td>{i.valuation}</td>
+                                    <td>{moment(i.date).format("MMM Do YY")}</td>
+                                    <td><Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link></td>
+                                </tr>
                                 )
+
                             }
-                        </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

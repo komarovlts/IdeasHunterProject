@@ -1,3 +1,53 @@
 .listado{
     border-color: red;
 }
+
+.listado_idea{
+    width: 70rem;
+    height: 2.5rem;
+}
+
+.listado_color{
+    background: blue;
+}
+
+.listado_idea_1{
+    width: 70rem;
+    height: 2.5rem;
+}
+
+.separacion{
+    margin-right: 5%;
+}
+
+.separacion2{
+    margin-right: 5%;
+    font-weight: bold;
+}
+
+.table_props{
+    width: 100%;
+    margin: 150px auto;
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 20px;
+}
+
+thead{
+    background-color:rgb(170, 56, 52);
+    border-bottom: solid 5px rgb(107, 10, 10);
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color:#ddd;
+}
+
+tr:hover td{
+    background-color:brown;
+    color: white;
+}
