@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Navbar from "../../components/Navbar/Navbar";
 
 class Edit extends Component {
 
@@ -40,7 +39,6 @@ class Edit extends Component {
     render() {
         return (
             <div className="App">
-                <Navbar />
                 <div class="container">
                     <div class="panel panel-default">
                         <div class="panel-heading">

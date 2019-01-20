@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "../../components/Buttons/buttons.css";
-import Navbar from "../../components/Navbar/Navbar";
 
 class WelcomeNU extends Component {
     constructor() {
@@ -12,9 +11,7 @@ class WelcomeNU extends Component {
 
     render() {
         return (
-
             <div className="App">
-                <Navbar />
                 <div className="container py-4">
                     <div className="row justify-content-around">
                         <div className="col-4">

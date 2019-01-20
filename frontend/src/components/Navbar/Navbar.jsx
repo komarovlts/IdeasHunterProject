@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-
 class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
         };
     }
+
 
     render() {
         return (
@@ -15,7 +16,7 @@ class Navbar extends Component {
                     <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
                 </a>
                 <form className="form-inline">
-                    <a className="navbar-brand" style={style_user_name} href="/">{localStorage.getItem("userName") == undefined ? " " : localStorage.getItem("userName")}</a>
+                    <a className="navbar-brand" style={style_user_name} href="/"> {localStorage.getItem("username") === undefined ? " " : localStorage.getItem("username")}  </a>
                 </form>
             </nav>
 
@@ -55,6 +56,7 @@ const style_user_name = {
     color: 'white',
 };
 
+/* CSS de Antiguo buscador */
 /*
 const style_button_search = {
     borderColor: 'white',

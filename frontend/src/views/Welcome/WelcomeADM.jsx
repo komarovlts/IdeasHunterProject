@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-
-import Navbar from "../../components/Navbar/Navbar";
 import "../../components/Buttons/buttons.css";
 
 class WelcomeADM extends Component {
     constructor() {
         super();
         this.state = {
-
         };
     }
 
     render() {
         return (
             <div className="App">
-                <Navbar />
                 <div className="container py-4">
                     <div className="row justify-content-around">
                         <div className="col-4">
@@ -30,7 +26,7 @@ class WelcomeADM extends Component {
                             <center>
                                 <div className="card cardTransp" style={style_card}>
                                     <form className="card-body">
-                                        <a class="btn btn-primary botonimagen2" style={style_button} href="/IndexChallenge" role="button">Desafíos</a>
+                                        <a class="btn btn-primary botonimagen2" style={style_button} href="/indexchallenge" role="button">Desafíos</a>
                                     </form>
                                 </div>
                             </center>

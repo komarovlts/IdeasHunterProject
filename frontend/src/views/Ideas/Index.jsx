@@ -38,10 +38,7 @@ class Index extends Component {
         const { term, ideas } = this.state;
         return (
             <div className="App">
-                <nav className="navbar navbar-light" style={style_central_navbar}>
-                    <a className="navbar-brand" href="/">
-                        <img id="brand-image" style={style_logo} alt="Website logo" src="logo_alaya_light.png" />
-                    </a>
+                <div class="container">
                     <form className="form-inline">
                         <input
                             className="form-control mr-sm-2"
@@ -54,10 +51,7 @@ class Index extends Component {
                         <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
                             <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
                         </button>
-                        <a className="navbar-brand" style={style_user_name} href="/">{localStorage.getItem("userName") == undefined ? " " : localStorage.getItem("userName")}</a>
                     </form>
-                </nav>
-                <div class="container">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
@@ -66,9 +60,9 @@ class Index extends Component {
                         </div>
 
                         <div class="panel-body">
-                                <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
+                            <h4><Link to="/createidea"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Idea</Link></h4>
                         </div>
-                        
+
                         <table className="table_props">
                             <thead>
                                 <tr>
@@ -82,21 +76,23 @@ class Index extends Component {
 
                             {
                                 ideas.filter(searchingFor(term)).map(i =>
-                                <tr>
-                                    <td>{i.title}</td>
-                                    <td>{i.description}</td>
-                                    <td>{i.category}</td>
-                                    <td>{i.valuation}</td>
-                                    <td>{moment(i.date).format("MMM Do YY")}</td>
-                                    <td><Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link></td>
-                                </tr>
+                                    <tr>
+                                        <td>{i.title}</td>
+                                        <td>{i.description}</td>
+                                        <td>{i.category}</td>
+                                        <td>{i.valuation}</td>
+                                        <td>{moment(i.date).format("MMM Do YY")}</td>
+                                        <td><Link to={`/ideadetails/${i.id}`}>{'Ver más'}</Link></td>
+                                    </tr>
                                 )
 
                             }
                         </table>
                     </div>
                 </div>
+
             </div>
+
         );
     }
 }
@@ -133,15 +129,6 @@ class Index extends Component {
 
 /* Styles */
 
-const style_logo = {
-    height: "50px",
-};
-
-const style_central_navbar = {
-    backgroundColor: 'rgb(183, 29, 2)',
-    marginBottom: '20px',
-};
-
 const style_button_search = {
     borderColor: 'white',
     color: 'white',
@@ -150,11 +137,6 @@ const style_button_search = {
 
 const style_buttonr_search = {
     height: '24px',
-};
-
-const style_user_name = {
-    marginLeft: '10px',
-    color: 'white',
 };
 
 export default Index;
