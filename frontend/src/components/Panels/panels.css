@@ -27,7 +27,7 @@
 
 .table_props{
     width: 100%;
-    margin: 150px auto;
+    margin: 70px auto;
     background-color: white;
     text-align: left;
     border-collapse: collapse;
@@ -50,4 +50,8 @@ tr:nth-child(even){
 tr:hover td{
     background-color:brown;
     color: white;
+}
+
+.panel-heading{
+    margin-top: 60px;
 }

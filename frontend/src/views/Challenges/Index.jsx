@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "../../components/Panels/panels.css";
 import axios from 'axios';
 var moment = require('moment');
+
 
 function searchingFor(term) {
     return function (x) {
@@ -58,30 +60,33 @@ class Index extends Component {
                         </div>
                         <div class="panel-body">
                             <h4><Link to="/createchallenge"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Añadir Desafío</Link></h4>
-                            <table class="table table-stripe">
-                                <thead>
-                                    <tr>
-                                        <th>Título</th>
-                                        <th>Descripción</th>
-                                        <th>Categoría</th>
-                                        <th>Fecha de Inicio</th>
-                                        <th>Fecha de Término</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        challenges.filter(searchingFor(term)).map(i =>
-                                            <tr>
-                                                <td><Link to={`/showchallenge/${i.id}`}>{i.title}</Link></td>
-                                                <td>{i.description}</td>
-                                                <td>{i.category}</td>
-                                                <td>{moment(i.startDate).format("MMM Do YY")}</td>
-                                                <td>{moment(i.finishDate).format("MMM Do YY")}</td>
-                                            </tr>
-                                        )
-                                    }
-                                </tbody>
-                            </table>
+                            
+                            <table className="table_props">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Descripción</th>
+                                    <th>Categoría</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Término</th>
+                                    <th>Ver más</th>
+                                </tr>
+                            </thead>
+
+                            {
+                                challenges.filter(searchingFor(term)).map(i =>
+                                <tr>
+                                    <td>{i.title}</td>
+                                    <td>{i.description}</td>
+                                    <td>{i.category}</td>
+                                    <td>{moment(i.startDate).format("MMM Do YY")}</td>
+                                    <td>{moment(i.finishDate).format("MMM Do YY")}</td>
+                                    <td><Link to={`/showchallenge/${i.id}`}>{'Ver más'}</Link></td>
+                                </tr>
+                                )
+
+                            }
+                        </table>
                         </div>
                     </div>
                 </div>

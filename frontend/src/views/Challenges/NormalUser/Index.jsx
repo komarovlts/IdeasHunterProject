@@ -57,30 +57,32 @@ class Index extends Component {
                         </h3>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-stripe">
-                                <thead>
-                                    <tr>
-                                        <th>Título</th>
-                                        <th>Descripción</th>
-                                        <th>Categoría</th>
-                                        <th>Fecha de Inicio</th>
-                                        <th>Fecha de Término</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {
-                                        challenges.filter(searchingFor(term)).map(i =>
-                                            <tr>
-                                                <td><Link to={`/showchallengenu/${i.id}`}>{i.title}</Link></td>
-                                                <td>{i.description}</td>
-                                                <td>{i.category}</td>
-                                                <td>{moment(i.startDate).format("MMM Do YY")}</td>
-                                                <td>{moment(i.finishDate).format("MMM Do YY")}</td>
-                                            </tr>
-                                        )
-                                    }
-                                </tbody>
-                            </table>
+                        <table className="table_props">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Descripción</th>
+                                    <th>Categoría</th>
+                                    <th>Fecha Inicio</th>
+                                    <th>Fecha Término</th>
+                                    <th>Ver más</th>
+                                </tr>
+                            </thead>
+
+                            {
+                                challenges.filter(searchingFor(term)).map(i =>
+                                <tr>
+                                    <td>{i.title}</td>
+                                    <td>{i.description}</td>
+                                    <td>{i.category}</td>
+                                    <td>{moment(i.startDate).format("MMM Do YY")}</td>
+                                    <td>{moment(i.finishDate).format("MMM Do YY")}</td>
+                                    <td><Link to={`/showchallenge/${i.id}`}>{'Ver más'}</Link></td>
+                                </tr>
+                                )
+
+                            }
+                        </table>
                         </div>
                     </div>
                 </div>
