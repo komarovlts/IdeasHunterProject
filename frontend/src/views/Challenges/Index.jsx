@@ -39,7 +39,7 @@ class Index extends Component {
         return (
             <div className="App">
                 <div class="container">
-                    <form className="form-inline">
+                    <form className="form-inline buscador">
                         <input
                             className="form-control mr-sm-2"
                             type="search"
@@ -48,9 +48,6 @@ class Index extends Component {
                             onChange={this.searchHandler}
                             value={term}
                         />
-                        <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
-                            <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
-                        </button>
                     </form>
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -101,6 +98,7 @@ const style_button_search = {
     borderColor: 'white',
     color: 'white',
 };
+
 
 const style_buttonr_search = {
     height: '24px',

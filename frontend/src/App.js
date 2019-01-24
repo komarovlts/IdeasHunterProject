@@ -34,8 +34,11 @@ import IndexChallengeNU from './views/Challenges/NormalUser/Index';
 import ShowChallengeNU from './views/Challenges/NormalUser/Show';
 
 
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+
+
 
 
 class App extends React.Component {

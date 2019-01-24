@@ -36,7 +36,8 @@ class Index extends Component {
         const { term, challenges } = this.state;
         return (
             <div className="App">
-                <form className="form-inline">
+                <div class="container">
+                <form className="form-inline buscador">
                     <input
                         className="form-control mr-sm-2"
                         type="search"
@@ -45,14 +46,14 @@ class Index extends Component {
                         onChange={this.searchHandler}
                         value={term}
                     />
-                    <button className="btn btn-outline-success my-2 my-sm-0" style={style_button_search} type="submit" >
-                        <img id="brand-image" style={style_buttonr_search} alt="Website logo" src="alayalogo.png" />
-                    </button>
                 </form>
                 <div class="container">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
+
+
+                            
                                 LISTA DE DESAFÍOS
                         </h3>
                         </div>
@@ -86,6 +87,7 @@ class Index extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
